@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="coder1" class="com.devsayed.model.Coder">
+<!--        Inject By Constructor-->
+        <constructor-arg index="0" value="Sayed"/>
+        <constructor-arg index="1" value="sayed@gmail.com"/>
+        <constructor-arg index="2" ref="computer1"/>
+<!--        &lt;!&ndash; Inject By Setter &ndash;&gt;-->
+<!--        <property name="name" value="Sayed Ahammed"/>-->
+<!--        <property name="email" value="sayed@gmail.com"/>-->
+<!--        <property name="computer" ref="computer1"/>-->
+    </bean>
+
+    <bean id="computer1" class="com.devsayed.model.Computer">
+<!--        Inject By Constructor-->
+        <constructor-arg index="0" value="AMD"/>
+<!--        &lt;!&ndash; Inject By Setter &ndash;&gt;-->
+<!--        <property name="brand" value="Intel"/>-->
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
+<!--There are two types of dependencies injection using XML. Setter based and constructor based.-->
